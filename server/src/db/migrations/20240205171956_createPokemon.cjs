@@ -12,6 +12,12 @@ exports.up = async (knex) =>
     table.string("image").notNullable();
     table.bigInteger("pokeApiId").notNullable().unique().index();
     table.string("types").notNullable();
+    table.integer("hp").notNullable();
+    table.integer("attack").notNullable();
+    table.integer("defense").notNullable();
+    table.integer("specialAttack").notNullable();
+    table.integer("specialDefense").notNullable();
+    table.integer("speed").notNullable();
     table.timestamp("createdAt").notNullable().defaultTo(knex.fn.now());
     table.timestamp("updatedAt").notNullable().defaultTo(knex.fn.now());
   });
