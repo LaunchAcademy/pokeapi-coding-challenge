@@ -7,6 +7,7 @@ import "../assets/scss/main.scss";
 import getCurrentUser from "../services/getCurrentUser";
 
 import PokemonIndex from "./pokemon/PokemonIndex";
+import PokemonShow from "./pokemon/PokemonShow";
 import RegistrationForm from "./registration/RegistrationForm";
 import SignInForm from "./authentication/SignInForm";
 import TopBar from "./layout/TopBar";
@@ -32,6 +33,8 @@ const App = (props) => {
       <div className="grid-container">
         <Switch>
           <Route exact path="/" component={PokemonIndex} />
+          <Route exact path="/pokemon" component={PokemonIndex} />
+          <Route exact path="/pokemon/:id" component={PokemonShow} />
           <Route exact path="/users/new" component={RegistrationForm} />
           <Route exact path="/user-sessions/new" component={SignInForm} />
         </Switch>
