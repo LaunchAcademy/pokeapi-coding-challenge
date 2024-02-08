@@ -5,8 +5,8 @@ class PokeApiClient {
     return JSON.parse(response.body);
   }
 
-  static async getPokemon({ baseUrl, limit = 20 }) {
-    const response = await got(`${baseUrl}?limit=${limit}`);
+  static async getPokemon({ limit = 20 }) {
+    const response = await got(`https://pokeapi.co/api/v2/pokemon?limit=${limit}`);
     return this.parsePokemonResponse(response);
   }
 
