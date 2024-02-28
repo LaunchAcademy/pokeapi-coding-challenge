@@ -4,6 +4,7 @@ module.exports = {
     jest: true,
     node: true,
   },
+  "import/extensions": ["error", "always", { ignorePackages: true }],
   rules: {
     "prettier/prettier": "error",
     "eslint no-param-reassign": ["error", { props: false }],
